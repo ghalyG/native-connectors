@@ -1,12 +1,12 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
@@ -19,12 +19,9 @@ export default {
     },
     extend: {
       colors: {
-        college: {
-          navy: "#1a365d",
-          gold: "#c4a777",
-          light: "#f8f9fa",
-          gray: "#64748b",
-        },
+        'college-navy': '#1B365D',
+        'college-gold': '#FFB81C',
+        'college-light': '#F5F5F5',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -82,3 +79,5 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
+export default config;
